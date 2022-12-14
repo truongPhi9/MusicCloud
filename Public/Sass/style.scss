@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$textColor: red;
+
+@mixin absoluteElement($dir: "center") {
+    @if($dir == "center") {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.container {
+    position: absolute;
+    @include absoluteElement(center);
+    width: 100%;
+    height: fit-content;
+    &-title {
+        padding: 20px;
+        &:hover {
+            background-color: $textColor;
+        }
+        &-text {
+            font-size: 18px;
+            color: rgb(255, 0, 212);
+        }
+        &:hover &-text {
+            color: white;
+        }
+    }
+}
