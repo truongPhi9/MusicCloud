@@ -4,15 +4,10 @@
     box-sizing: border-box;
 }
 
-$textColor: red;
-
-@mixin absoluteElement($dir: "center") {
-    @if($dir == "center") {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
+// import variables
+@import "./_variables.scss";
+// import mixin
+@import "./_mixin.scss";
 
 .container {
     width: 100%;

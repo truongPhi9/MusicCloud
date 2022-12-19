@@ -1,0 +1,12 @@
+@mixin absoluteElement($dir: "center") {
+    @if($dir == "center") {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @if($dir == "left") {
+        top: 50%;
+        left: 0%;
+        transform: translate(0%, -50%);
+    }
+}
