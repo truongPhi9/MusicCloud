@@ -15,10 +15,11 @@ $textColor: red;
 }
 
 .container {
-    position: absolute;
-    @include absoluteElement(center);
     width: 100%;
     height: fit-content;
+    position: absolute;
+    @include absoluteElement(center);
+
     &-title {
         padding: 20px;
         &:hover {
